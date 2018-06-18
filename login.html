@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Licorería</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <script src="js/script.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"/></head>
+
+</head>
+<body style="vertical-align: middle; padding-top: 10%;">
+    <div class="container" style="width: 30%;">
+        <form class="form-signin">
+            <h2 class="form-signin-heading">Iniciar sesión</h2><br/>
+            <label for="inputUserName" class="sr-only">Nombre de usuario</label>
+            <input type="text" id="inputUserName" class="form-control" placeholder="Nombre de usuario" required="" autofocus=""><br/>
+            <label for="inputPassword" class="sr-only">Contraseña</label>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required=""><br/>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="remember-me"> Recordarme
+                </label>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block" type="button" onclick="getUser()">Ingresar</button>
+        </form>
+    </div>
+</body>
+</html>
