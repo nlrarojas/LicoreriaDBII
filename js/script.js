@@ -24,3 +24,11 @@ function getUser(){
 function openConfiguration(){    
     window.location = "configuracion.html";
 }
+
+function openUsers() {
+    window.location = "users.html";
+}
+
+function signIn(){
+    window.location = "signIn.html";
+}

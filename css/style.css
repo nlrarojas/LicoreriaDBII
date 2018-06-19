@@ -179,3 +179,9 @@ th, tr{
     color: white;
     font-weight: bold;
 }
+
+#newUser:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #f60;
+}

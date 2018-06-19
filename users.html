@@ -7,32 +7,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
         
-    
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>    
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"/></head>
         <script src="js/script.js"></script>
-        <script src="js/configuration.js"></script>        
-        <style>
-            /* Always set the map height explicitly to define the size of the div
-            * element that contains the map. */
-            #map {
-                height: 50%;
-                width: 40%;
-                margin: 0 auto;
-            }
-            /* Optional: Makes the sample page fill the window. */
-            html, body {
-                height: 100%;
-                margin: 0;
-                padding: 0;
-            }
-        </style>
+        <script src="js/users.js"></script>        
   </head>
   <body>
-      <header>
+        <header>
             <div id="divEncabezado"><br/>        
                 <div  style="height: auto; width:55%; margin: 0 auto; padding-top: 1em;">
                     <nav class="navbar navbar-expand-lg navbar-light bg-light">    
@@ -73,37 +57,12 @@
                 </div>
             </div>
         </header><br/><br/><br/>
-        <div style="text-align: center;"><strong><h1>Configuración de la tienda</h1></strong></div>
-        <div style="width: 25%; margin: 0 auto;">          
-            <label>Sucursal</label>
-            <input class="form-control" type="number" id="sucursal" min="0" placeholder="Número de sucursal"/><br/>
-            <label>Nombre de la sucursal</label><br/>
-            <input class="form-control" type="text" id="nombre" placeholder="Nombre de la sucursal"/><br/>
-            <label>¿Dónde está ubicado?</label><br/>          
-        </div> 
-        <div id="map"></div><br/>
-        <div style="width: 30%; margin: 0 auto;">
-            <div style="display: inline-block;">
-                <div style="float: left; width: 40%;">
-                    <label>Latitud</label><br/>
-                    <input class="form-control" type="number" name="latInput" id="latInput" placeholder="Latitude"/><br/>
-                </div>
-                <div style="float: right; width: 40%;">
-                    <label>Longitud</label><br/>
-                    <input class="form-control" type="number" name="lngInput" id="lngInput" placeholder="Longitud"/><br/>
-                </div>
-            </div>
+        <div style="text-align: center;"><strong><h1>Gestionar usuarios</h1></strong></div><br/>        
+        <div style="text-align: center; padding-left: 20%;">
+            <a id="newUser" onclick="oepnNewUser()" style="float: left;">Nuevo usuario</a><br/> 
+            <table class="table" id="tableUsers">
+            
+            </table>
         </div>
-        <div style="width: 25%; margin: 0 auto;">
-            <label>Dirección de la sucursal</label><br/>
-            <textarea class="form-control" rows="5" id="direccion" placeholder="Dirección"></textarea><br/>
-            <label>Horario de apertura</label><br/>
-            <input class="form-control" id="horaApertura" type="time"/><br/>
-            <label>Horario de cierre</label><br/>
-            <input class="form-control" id="horaCierre" type="time"/><br/>
-            <input class="btn" type="button" onclick="saveConfiguration()" value="Guardar"/>
-        </div><br/><br/><br/>        
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBllW1XdBZ6BDHt49iP8KjmUEp2ME5boAg&callback=initMap"
-    async defer></script>
   </body>
 </html>
