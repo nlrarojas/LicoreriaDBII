@@ -68,12 +68,16 @@ function typeUserSelected (sel){
 }
 
 function saveNewUserAdministrator() {
-    uriGetUserRole = webServiceRoot + "newAdministrator.php?" +
-        "userName=" + $('#userUserName').val() + 
-        "&password=" + $('#userPWD').val(); 
-    console.log(uriGetUserRole);
+    uriGetUserRole = webServiceRoot + "getSucursal.php";
     $.getJSON(uriGetUserRole).done(function (data) {         
-        window.location = "administrador.html";
+        uriGetUserRole = webServiceRoot + "newAdministrator.php?" +
+            "userName=" + $('#userUserName').val() + 
+            "&password=" + $('#userPWD').val() +
+            "&sucursal=" + data.Sucursal[0].idSucursal;
+        console.log(uriGetUserRole);
+        $.getJSON(uriGetUserRole).done(function (data) {         
+            window.location = "administrador.html";
+        });
     });
 }
 
