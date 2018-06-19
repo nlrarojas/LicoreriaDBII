@@ -35,3 +35,7 @@ function openUsers() {
 function signIn(){
     window.location = "signIn.html";
 }
+
+function openPayments() {
+    window.location = "paymentsStyle.html";
+}

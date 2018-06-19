@@ -74,7 +74,7 @@ function saveNewUserAdministrator() {
             "userName=" + $('#userUserName').val() + 
             "&password=" + $('#userPWD').val() +
             "&sucursal=" + data.Sucursal[0].idSucursal;
-        console.log(uriGetUserRole);
+        alert(uriGetUserRole);
         $.getJSON(uriGetUserRole).done(function (data) {         
             window.location = "administrador.html";
         });
@@ -82,14 +82,18 @@ function saveNewUserAdministrator() {
 }
 
 function saveNewUserSaler() {
-    file = $('#userFile')[0].files[0].name;
-    uriGetUserRole = webServiceRoot + "newSaller.php?" +
-        "foto=" + file + 
-        "&userName=" + $('#userUserName').val() + 
-        "&password=" + $('#userPWD').val(); 
-    console.log(uriGetUserRole);
-    $.getJSON(uriGetUserRole).done(function (data) {         
-        window.location = "administrador.html";
+    uriGetUserRole = webServiceRoot + "getSucursal.php";
+    $.getJSON(uriGetUserRole).done(function (data) {   
+        file = $('#userFile')[0].files[0].name;
+        uriGetUserRole = webServiceRoot + "newSaller.php?" +
+            "foto=" + file + 
+            "&userName=" + $('#userUserName').val() + 
+            "&password=" + $('#userPWD').val() +
+            "&sucursal=" + data.Sucursal[0].idSucursal;
+        console.log(uriGetUserRole);
+        $.getJSON(uriGetUserRole).done(function (data) {         
+            window.location = "administrador.html";
+        });
     });
 }
 
