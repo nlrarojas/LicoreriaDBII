@@ -39,3 +39,7 @@ function signIn(){
 function openPayments() {
     window.location = "paymentsStyle.html";
 }
+
+function openProducts() {
+    window.location = "products.html";
+}
