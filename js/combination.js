@@ -1,40 +1,39 @@
 var webServiceRoot = "http://localhost:8080/webServiceDB/";
 //var webServiceRoot = "http://163.178.173.144:8080/estudiantes/licoreria/";
-var uriGetUserRole = webServiceRoot + "getProducts.php";
+var uriGetUserRole = webServiceRoot + "getCombinations.php";
 var id;
 
 $(document).ready(function () {    
-    $.getJSON(uriGetUserRole).done(function (data) {  
-        console.log(data.Product);            
-        fillDataProducts(data.Product);
+    $.getJSON(uriGetUserRole).done(function (data) {
+        console.log(data.Combination);            
+        fillCombination(data.Combination);
     });    
 });
 
-function fillDataProducts(dataTable) {
-    selectLicor1 = document.getElementById("licor1");
-    selectLicor2 = document.getElementById("licor2");
-    if (selectLicor1 && selectLicor2) {
-        var selectContent = "";    
+function fillCombination(dataTable) {
+    table = document.getElementById("tableCombinations");
+    if (table) {
+        var tableContent = "<thead class=thead-dark> <tr><th scope=col>Nombre</th><th scope=col>Descripción</th><th scope=col>Licor 1</th><th scope=col>Licor 2</th><th scope=col>Acciones</th></tr></thead>";    
         for (var i = 0; i < dataTable.length; i++){                
-            selectContent += "<option value="+dataTable[i].idLicor+">"+dataTable[i].nombreLicor+"</option>"
+            tableContent += "<tbody><tr>"                
+            tableContent += "<td>" + dataTable[i].NombreCombinacion + "</td>";
+            tableContent += "<td>" + dataTable[i].descripcion + "</td>";
+            tableContent += "<td>" + dataTable[i].NombreLicor1 + "</td>";                                 
+            tableContent += "<td>" + dataTable[i].NombreLicor2 + "</td>";            
+            tableContent += "<td><a id=newUser onclick=deleteCombination("+dataTable[i].IdCombinacion+")>Eliminar</a>&ensp;&ensp;&ensp;&ensp;<a id=newUser onclick=updateCombination("+dataTable[i].IdCombinacion+")>Modificar</a></td></tr></tbody>"
         }
-        selectLicor1.innerHTML = selectContent;
-        selectLicor2.innerHTML = selectContent;
+        table.innerHTML = tableContent;
     }
 }
 
-function saveCombination() {    
-    uriGetUserRole = webServiceRoot + "newCombination.php?" + 
-    "licor1=" + $('#licor1').val() +
-    "&licor2=" + $('#licor2').val() + 
-    "&name=" + $('#combinationName').val() + 
-    "&descrip=" + $('#combinationDescription').val();
-    $.getJSON(uriGetUserRole).done(function (data) {              
-        console.log("a" + data);
-        window.location = "products.html";             
-    });    
+function openNewCombination() {
+    window.location = "newCombination.html";
 }
 
-function canccelOperation() {
-    window.location = "products.html";    
+function deleteCombination(id) {
+    window.location = "deleteCombination.html?id=" + id;
+}
+
+function updateCombination(id) {
+    window.location = "updateCombination.html?id=" + id;
 }
