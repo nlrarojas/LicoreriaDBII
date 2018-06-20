@@ -1,5 +1,5 @@
-//var webServiceRoot = "http://163.178.173.144:8080/estudiantes/licoreria/";
-var webServiceRoot = "http://localhost:8080/webServiceDB/";
+var webServiceRoot = "http://163.178.173.144:8080/estudiantes/licoreria/";
+//var webServiceRoot = "http://localhost:8080/webServiceDB/";
 
 $(document).ready(function(){
     $('#errorLogin').hide();
@@ -17,9 +17,9 @@ function getUser(){
         if (role == 1) {
             window.location = "administrador.html";
         } else if (role == 2) {
-            window.location = "administrador.html";
+            window.location = "facturador.html";
         } else if (role == 3) {
-            window.location = "administrador.html";
+            window.location = "cliente.html";
         } else {            
             
         }
@@ -49,4 +49,16 @@ function openProducts() {
 
 function openNewProduct () {
     window.location = "newProduct.html";
+}
+
+function openInventory() {
+    window.location = "inventory.html";
+}
+
+function openQuerys() {
+
+}
+
+function closeSession() {
+    window.location = "login.html";
 }

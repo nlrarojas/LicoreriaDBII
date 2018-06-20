@@ -1,5 +1,5 @@
-var webServiceRoot = "http://localhost:8080/webServiceDB/";
-//var webServiceRoot = "http://163.178.173.144:8080/estudiantes/licoreria/";
+//var webServiceRoot = "http://localhost:8080/webServiceDB/";
+var webServiceRoot = "http://163.178.173.144:8080/estudiantes/licoreria/";
 var uriGetUserRole = webServiceRoot + "getCombinations.php";
 var id;
 

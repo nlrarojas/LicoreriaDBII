@@ -34,7 +34,7 @@
   <body>
       <header>
             <div id="divEncabezado"><br/>        
-                <div  style="height: auto; width:80%; margin: 0 auto; padding-top: 1em;">
+                <div  style="height: auto; width: 80%; margin: 0 auto; padding-top: 1em;">
                     <nav class="navbar navbar-expand-lg navbar-light bg-light">    
                         <a class="navbar-brand" >Licorería Store</a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
@@ -56,16 +56,13 @@
                                     <a class="nav-link btn btn-primary" onclick="openProducts()" style="color: white;">Productos <span class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item active">
-                                    <a class="nav-link btn btn-primary" href="?obtenerEstilo" style="color: white;">Calcular estilo <span class="sr-only">(current)</span></a>
+                                    <a class="nav-link btn btn-primary" onclick="openInventory()" style="color: white;">Inventario <span class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item active">
-                                    <a class="nav-link btn btn-primary" href="?tipoProfesor" style="color: white;">Tipo de Profesor <span class="sr-only">(current)</span></a>
-                                </li>
+                                    <a class="nav-link btn btn-primary" onclick="openQuerys()" style="color: white;">Consultas <span class="sr-only">(current)</span></a>
+                                </li>            
                                 <li class="nav-item active">
-                                    <a class="nav-link btn btn-primary" href="?redes" style="color: white;">Redes <span class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="nav-item active">
-                                    <a class="nav-link btn btn-primary" href="?entrenar" style="color: white;">Entrenar <span class="sr-only">(current)</span></a>
+                                    <a class="nav-link btn btn-primary" onclick="closeSession()" style="color: white;">Cerrar sesión <span class="sr-only">(current)</span></a>
                                 </li>
                             </ul> 
                         </div>

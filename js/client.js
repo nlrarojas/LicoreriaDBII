@@ -20,7 +20,7 @@ function writeTable(dataTable) {
             tableContent += "<td>" + dataTable[i].nombre + "</td>";                                 
             tableContent += "<td>" + dataTable[i].annos + "</td>";
             tableContent += "<td>" + dataTable[i].precio + "</td>";
-            tableContent += "<td><a id=newUser onclick=deleteProduct("+dataTable[i].idLicor+")>Eliminar</a>&ensp;&ensp;&ensp;&ensp;<a id=newUser onclick=updateProduct("+dataTable[i].idLicor+")>Modificar</a></td></tr></tbody>"
+            tableContent += "<td><a id=newUser onclick=deleteProduct("+dataTable[i].idLicor+")>ver ubicaciones</a></td></tr></tbody>"
         }
         table.innerHTML = tableContent;
     }

@@ -1,5 +1,6 @@
-var webServiceRoot = "http://localhost:8080/webServiceDB/";
-var webServiceRootLocal = "http://localhost:8080/webServiceDB/";
+var webServiceRoot = "http://163.178.173.144:8080/estudiantes/licoreria/";
+var webServiceRootLocal = "http://163.178.173.144:8080/estudiantes/licoreria/";
+//var webServiceRootLocal = "http://localhost:8080/webServiceDB/";
 
 var uriGetProcedencia = webServiceRoot + "getProcedencias.php";
 var uriGetAnnejado = webServiceRoot + "getAnnejados.php";
