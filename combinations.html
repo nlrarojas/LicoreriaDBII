@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Licorería</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"/></head>
+        <script src="js/script.js"></script>
+        <script src="js/combination.js"></script>        
+  </head>
+  <body>
+        <header>
+            <div id="divEncabezado"><br/>        
+                <div  style="height: auto; width:80%; margin: 0 auto; padding-top: 1em;">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">    
+                        <a class="navbar-brand" >Licorería Store</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin: 0 auto;">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link btn btn-primary" onclick="openConfiguration()" style="color: white;">Configuración de la tienda<span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link btn btn-primary" onclick="openUsers()" style="color: white;">Usuarios<span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link btn btn-primary" onclick="openPayments()" style="color: white;">Tipos de pago<span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link btn btn-primary" onclick="openProducts()" style="color: white;">Productos <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link btn btn-primary" href="?obtenerEstilo" style="color: white;">Calcular estilo <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link btn btn-primary" href="?tipoProfesor" style="color: white;">Tipo de Profesor <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link btn btn-primary" href="?redes" style="color: white;">Redes <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link btn btn-primary" href="?entrenar" style="color: white;">Entrenar <span class="sr-only">(current)</span></a>
+                                </li>
+                            </ul> 
+                        </div>
+                    </nav>                
+                </div>
+            </div>
+        </header><br/><br/><br/>
+        <div style="text-align: center;"><strong><h1>Crear combinación</h1></strong></div><br/>        
+        <div style="text-align: center; padding-left: 20%; width: 50%;">
+            <label>Licor 1</label>
+            <select class="form-control" id="licor1"></select><br/>
+            <label>Licor 2</label>
+            <select class="form-control" id="licor2"></select><br/>
+            <label>Nombre</label>
+            <input class="form-control" type="text" placeholder="Nombre de la combinación" id="combinationName"/><br/>
+            <label>Descripcion</label>
+            <textarea class="form-control" rows="5" placeholder="Descripcion" id="combinationDescription"></textarea><br/>
+            <input class="btn btn-lg btn-primary" type="button" value="Guardar" onclick="saveProduct();" style="float: left;"/>
+            <input class="btn btn-lg btn-danger" type="button" value="Cancelar" onclick="cancelOperation();" style="float: right;"/><br/><br/><br/>
+        </div>
+  </body>
+</html>
