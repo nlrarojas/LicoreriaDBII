@@ -18,7 +18,7 @@
   <body>
         <header>
             <div id="divEncabezado"><br/>        
-                <div  style="height: auto; width:55%; margin: 0 auto; padding-top: 1em;">
+                <div  style="height: auto; width:80%; margin: 0 auto; padding-top: 1em;">
                     <nav class="navbar navbar-expand-lg navbar-light bg-light">    
                         <a class="navbar-brand" >Licorería Store</a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
@@ -57,15 +57,18 @@
                 </div>
             </div>
         </header><br/><br/><br/>
-        <div style="text-align: center;"><strong><h1>Eliminar tipo de añejado</h1></strong></div><br/>        
+        <div style="text-align: center;"><strong><h1>Eliminar tipo de añejado</h1></strong></div><br/>                
         <div style="text-align: left; padding-left: 20%;">
             <label>Id</label><br/>
             <input type="text" id="idAnnejado" readonly="true" class="form-control" style="width: 65%;"/><br/><br/>
             <textarea id="txtAnnejadoDescripcion" rows="5" cols="5" style="width: 75%;" class="form-control" placeholder="Ingrese la descripción del tipo de pago"></textarea><br/><br/>
+            <div id="alertDiv" class="alert alert-danger">
+                <strong>No se puede eliminar porque existen productos con este tipo</strong> 
+            </div><br/>
             <div style="display: inline-block; width: 30%;">
                 <input type="button" class="btn btn-lg btn-danger" onclick="deleteAnnejado();" value="Eliminar" style="float: left;"/>
                 <input type="button" class="btn btn-lg btn-primary" onclick="cancelOperation();" value="Cancelar" style="float: right;"/><br/><br/><br/>
-            </div>            
+            </div>                        
         </div>
   </body>
 </html>

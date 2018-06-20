@@ -1,4 +1,5 @@
-var webServiceRoot = "http://163.178.173.144:8080/estudiantes/licoreria/";
+//var webServiceRoot = "http://163.178.173.144:8080/estudiantes/licoreria/";
+var webServiceRoot = "http://localhost:8080/webServiceDB/";
 
 $(document).ready(function(){
     $('#errorLogin').hide();
@@ -9,8 +10,10 @@ function getUser(){
     var password = document.getElementById("inputPassword").value;
     uriGetUserRole = webServiceRoot + "getUserType.php" + "?userName=" + userName + "&password=" + password;
     console.log(uriGetUserRole);
-    $.getJSON(uriGetUserRole).done(function (data) {        
-        var role = data.Role;        
+    
+    $.getJSON(uriGetUserRole).done(function (data) {       
+        console.log(data.Role[0]); 
+        var role = data.Role[0].Role;        
         if (role == 1) {
             window.location = "administrador.html";
         } else if (role == 2) {

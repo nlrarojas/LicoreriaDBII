@@ -4,6 +4,7 @@ var uriGetUserRole = webServiceRoot + "getAnnjeado.php";
 var id;
 
 $(document).ready(function () {    
+    $("#alertDiv").hide();
     var url = new URL(window.location.href);
     id = url.searchParams.get("id");
     uriGetUserRole += "?id=" + id;    
@@ -16,10 +17,13 @@ $(document).ready(function () {
 
 function deleteAnnejado() {
     descripcion = $('#txtAnnejadoDescripcion').val();
-    uriGetUserRole = webServiceRoot + "deleteAnnejado.php?id=" + id;    
+    uriGetUserRole = webServiceRoot + "deleteAnnejado.php?id=" + id;       
     $.getJSON(uriGetUserRole).done(function (data) {              
-        console.log(data);
-        window.location = "annejados.html";     
+        if (data.length == 0){
+            $("#alertDiv").show();
+        } else {
+            window.location = "annejados.html";     
+        }        
     });    
 }
 

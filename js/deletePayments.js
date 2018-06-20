@@ -15,7 +15,7 @@ $(document).ready(function () {
 function deletePayment() {
     uriGetUserRole = webServiceRoot + "deletePayment.php?id=" + id;
     $.getJSON(uriGetUserRole).done(function (data) {              
-        window.location = "paymentsStyle.html";    
+        window.location = "paymentsStyle.html";
     });
 }
 
