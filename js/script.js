@@ -46,3 +46,7 @@ function openPayments() {
 function openProducts() {
     window.location = "products.html";
 }
+
+function openNewProduct () {
+    window.location = "newProduct.html";
+}
